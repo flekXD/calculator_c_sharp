@@ -19,11 +19,11 @@
             set { second = value; }
         }
 
-        //default constructor
-        public Calculator(double first, double second)
+        //constructor by default
+        public Calculator()
         {
-            this.first = first;
-            this.second = second;
+            First = 0;
+            Second = 0;
         }
         private double Add()
         {

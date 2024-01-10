@@ -1,0 +1,12 @@
+C:\Users\Fleks\source\repos\Class_Calculator\Class_Calculator\bin\Debug\net8.0\Class_Calculator.deps.json
+C:\Users\Fleks\source\repos\Class_Calculator\Class_Calculator\bin\Debug\net8.0\Class_Calculator.dll
+C:\Users\Fleks\source\repos\Class_Calculator\Class_Calculator\bin\Debug\net8.0\Class_Calculator.pdb
+C:\Users\Fleks\source\repos\Class_Calculator\Class_Calculator\obj\Debug\net8.0\Class_Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fleks\source\repos\Class_Calculator\Class_Calculator\obj\Debug\net8.0\Class_Calculator.AssemblyInfoInputs.cache
+C:\Users\Fleks\source\repos\Class_Calculator\Class_Calculator\obj\Debug\net8.0\Class_Calculator.AssemblyInfo.cs
+C:\Users\Fleks\source\repos\Class_Calculator\Class_Calculator\obj\Debug\net8.0\Class_Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Fleks\source\repos\Class_Calculator\Class_Calculator\obj\Debug\net8.0\Class_Calculator.sourcelink.json
+C:\Users\Fleks\source\repos\Class_Calculator\Class_Calculator\obj\Debug\net8.0\Class_Calculator.dll
+C:\Users\Fleks\source\repos\Class_Calculator\Class_Calculator\obj\Debug\net8.0\refint\Class_Calculator.dll
+C:\Users\Fleks\source\repos\Class_Calculator\Class_Calculator\obj\Debug\net8.0\Class_Calculator.pdb
+C:\Users\Fleks\source\repos\Class_Calculator\Class_Calculator\obj\Debug\net8.0\ref\Class_Calculator.dll
