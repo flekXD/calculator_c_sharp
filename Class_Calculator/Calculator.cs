@@ -57,6 +57,10 @@
             {
                 result = Multiply();
             }
+            else if (operation == '/')
+            {
+                result = First / Second;
+            }
             else
             {
                 Console.WriteLine("Error. Please write correct operation");

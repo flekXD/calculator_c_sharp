@@ -59,11 +59,11 @@ namespace Unit_Testing_Calculator
         }
 
         [TestMethod]
-        public void Devide_20and10_Returns2()
+        public void Devide_20and10_Returns_half()
         {
             // Arrange
             char operation = '/';
-            double expected = 2;
+            double expected = 0.5;
 
             // Act
             double actual = calculator.Calculate(operation);
