@@ -1,23 +1,29 @@
-using Class_Calculator;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Class_Calculator; // Assuming this is the correct namespace for your Calculator class
 
 namespace Unit_Testing_Calculator
 {
     [TestClass]
     public class CalculatorTests
     {
+        private Calculator calculator;
+
+        [TestInitialize]
+        public void TestInitialize()
+        {
+            calculator = new Calculator();
+            calculator.First = 10;
+            calculator.Second = 20;
+        }
+
         [TestMethod]
         public void Sum_10and20_Returns30()
         {
             // Arrange
-            double x = 10;
-            double y = 20;
             char operation = '+';
             double expected = 30;
 
             // Act
-            Calculator calculator = new Calculator();
-            calculator.First = x;
-            calculator.Second = y;
             double actual = calculator.Calculate(operation);
 
             // Assert
@@ -28,15 +34,10 @@ namespace Unit_Testing_Calculator
         public void Subtract_20from10_ReturnsMinus10()
         {
             // Arrange
-            double x = 10;
-            double y = 20;
             char operation = '-';
             double expected = -10;
 
             // Act
-            Calculator calculator = new Calculator();
-            calculator.First = x;
-            calculator.Second = y;
             double actual = calculator.Calculate(operation);
 
             // Assert
@@ -44,18 +45,13 @@ namespace Unit_Testing_Calculator
         }
 
         [TestMethod]
-        public void Multiply_5and4_Returns20()
+        public void Multiply_20and10_Returns200()
         {
             // Arrange
-            double x = 5;
-            double y = 4;
             char operation = '*';
-            double expected = 20;
+            double expected = 200;
 
             // Act
-            Calculator calculator = new Calculator();
-            calculator.First = x;
-            calculator.Second = y;
             double actual = calculator.Calculate(operation);
 
             // Assert
@@ -66,15 +62,10 @@ namespace Unit_Testing_Calculator
         public void InvalidOperation_ReturnsNaN()
         {
             // Arrange
-            double x = 8;
-            double y = 4;
             char operation = 'f';
             double expected = double.NaN;
 
             // Act
-            Calculator calculator = new Calculator();
-            calculator.First = x;
-            calculator.Second = y;
             double actual = calculator.Calculate(operation);
 
             // Assert
