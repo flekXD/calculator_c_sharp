@@ -25,17 +25,19 @@
             First = 0;
             Second = 0;
         }
-        private double Add()
+
+        //Operations (for testing i make it public)
+        public double Add()
         {
             return First + Second;
         }
 
-        private double Subtract()
+        public double Subtract()
         {
             return First - Second;
         }
 
-        private double Multiply()
+        public double Multiply()
         {
             return First * Second;
         }

@@ -16,6 +16,8 @@ class Program
 
         // Write operation
         Console.WriteLine("Write operation (+, -, *):");
+
+        //result
         Console.WriteLine(calculator.Calculate(Console.ReadLine()[0]));
 
         Console.ReadLine();
