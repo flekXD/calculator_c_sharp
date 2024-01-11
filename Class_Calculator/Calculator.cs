@@ -41,6 +41,10 @@
         {
             return First * Second;
         }
+        private double Divine()
+        {
+            return First / Second;
+        }
 
         public double Calculate(char operation)
         {
@@ -59,7 +63,7 @@
             }
             else if (operation == '/')
             {
-                result = First / Second;
+                result = Divine();
             }
             else
             {
