@@ -59,6 +59,20 @@ namespace Unit_Testing_Calculator
         }
 
         [TestMethod]
+        public void Devide_20and10_Returns2()
+        {
+            // Arrange
+            char operation = '/';
+            double expected = 2;
+
+            // Act
+            double actual = calculator.Calculate(operation);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void InvalidOperation_ReturnsNaN()
         {
             // Arrange

@@ -26,18 +26,18 @@
             Second = 0;
         }
 
-        //Operations (for testing i make it public)
-        public double Add()
+        //Operations
+        private double Add()
         {
             return First + Second;
         }
 
-        public double Subtract()
+        private double Subtract()
         {
             return First - Second;
         }
 
-        public double Multiply()
+        private double Multiply()
         {
             return First * Second;
         }
