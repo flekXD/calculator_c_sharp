@@ -5,20 +5,21 @@ class Program
 {
     static void Main()
     {
-        Calculator calculator = new Calculator();
-        // first number
-        Console.WriteLine("first number:");
-        calculator.First = Convert.ToInt32(Console.ReadLine());
+            Calculator calculator = new Calculator();
 
-        // second number
-        Console.WriteLine("second number:");
-        calculator.Second = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введіть вираз: ");
+            string expression = Console.ReadLine(); //for example 2 + 2 * 2
 
-        // Write operation
-        Console.WriteLine("Write operation (+, -, *):");
+            double result = calculator.EvaluateExpression(expression);
 
-        //result
-        Console.WriteLine(calculator.Calculate(Console.ReadLine()[0]));
+            if (!double.IsNaN(result))
+            {
+                Console.WriteLine($"Результат: {result}");
+            }
+            else
+            {
+                Console.WriteLine("Неможливо обчислити результат.");
+            }
 
         Console.ReadLine();
     }

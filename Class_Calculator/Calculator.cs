@@ -2,75 +2,54 @@
 {
     public class Calculator
     {
-        private double first;
-        private double second;
+        private readonly Dictionary<string, IOperation> operations;
 
-
-        //get and set operations
-        public double First
-        {
-            get { return first; }
-            set { first = value; }
-        }
-
-        public double Second
-        {
-            get { return second; }
-            set { second = value; }
-        }
-
-        //constructor by default
         public Calculator()
         {
-            First = 0;
-            Second = 0;
+            operations = new Dictionary<string, IOperation>
+            {
+                {"+", new AddOperation()},
+                {"-", new SubtractOperation()},
+                {"*", new MultiplyOperation()},
+                {"/", new DivideOperation()}
+            };
         }
 
-        //Operations
-        private double Add()
+        public double EvaluateExpression(string expression)
         {
-            return First + Second;
+            RPN rpn = new RPN();
+            string[] tokens = rpn.ConvertToRPN(expression);
+            Stack<double> stack = new Stack<double>();
+
+            if(tokens.Length > 2) { 
+                foreach (string token in tokens)
+                {
+                    if (double.TryParse(token, out double operand))
+                    {
+                        stack.Push(operand);
+                    }
+                    else if (operations.ContainsKey(token))
+                    {
+                        double secondOperand = stack.Pop();
+                        double firstOperand = stack.Pop();
+                        double result = operations[token].Execute(firstOperand, secondOperand);
+                        stack.Push(result);
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Некоректний токен: {token}");
+                        return double.NaN;
+                    }
+                }
+            }
+            if (stack.Count != 1)
+            {
+                Console.WriteLine("Некоректний вираз.");
+                return double.NaN;
+            }
+
+            return stack.Pop();
         }
 
-        private double Subtract()
-        {
-            return First - Second;
-        }
-
-        private double Multiply()
-        {
-            return First * Second;
-        }
-        private double Divine()
-        {
-            return First / Second;
-        }
-
-        public double Calculate(char operation)
-        {
-            double result;
-            if (operation == '+')
-            {
-                result = Add();
-            }
-            else if (operation == '-')
-            {
-                result = Subtract();
-            }
-            else if (operation == '*')
-            {
-                result = Multiply();
-            }
-            else if (operation == '/')
-            {
-                result = Divine();
-            }
-            else
-            {
-                Console.WriteLine("Error. Please write correct operation");
-                result = double.NaN;
-            }
-            return result;
-        }
     }
 }
